@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %} Questionnaire {% endblock %}
+{% block content %}
+    {% load static %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static "css/questionnaire.css" %}">
+  <link rel="stylesheet" href="{% static "css/global.css" %}" />
+
+  <div class="container">
+    <div class="img-container">
+      <img class="img" src="{% static "images/cartoon_man_lifting.jpg" %}" alt="woman online">
+    </div>
+    <form method="POST" class="txt-container">
+      {% csrf_token %}
+      <h1 class="title">Questionnaire</h1>
+        <div class="section">
+          <label for="Exercise" class="question">
+                How long do you exercise in a week?
+            <input type="number" name="Exercise" required/>
+          </label>
+        </div>
+        <div class="section">
+          <label for="Work" class="question">
+                How long do you work in a week?
+            <input type="number" name="Work" required/>
+          </label>
+        </div>
+        <div class="section">
+          <label for="Relax" class="question">
+                How long do you relax in a week?
+            <input type="number" name="Relax" required/>
+          </label>
+        </div>
+        <div class="section">
+          <label for="Study" class="question">
+                How long do you study?
+            <input type="number" name="Study" required/>
+          </label>
+        </div>
+        <div class="section">
+          <label for="Self Care" class="question">
+                How long do you spend taking care of your mental health?
+            <input type="number" name="Self Care" required/>
+          </label>
+        </div>
+        <button type="submit" class="register-button" style="margin-top: 1rem">Submit</button>
+    </form>
+
+  </div>
+{% endblock %}

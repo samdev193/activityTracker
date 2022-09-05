@@ -1,0 +1,16 @@
+
+
+.container{
+    margin-top: 15%;
+    display: flex;
+}
+
+
+.item:nth-child(2){
+    text-align: center;
+    gap: 2rem;
+    color: var(--clr-white);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-light);
+    line-height: 1.5;
+}

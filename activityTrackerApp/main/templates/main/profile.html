@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} profile {% endblock %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/profile.css" %}"/>
+    <div class="user-card-container">
+        <div class="user-card">
+        <h2>{{ user_profile.user.username }}</h2>
+        </div>
+
+        <div class="activity-cards">
+            <div class="activities">
+                <div class="item">
+                <h2>Exercise</h2>
+                </div>
+                <div class="item">
+                <h1>{{ user_profile.exercise }}hrs</h1>
+                </div>
+            </div>
+
+            <div class="activities">
+                <h2>Work</h2>
+            <h1>{{ user_profile.work }}hrs</h1>
+            </div>
+
+            <div class="activities">
+                <h2>Relax</h2>
+            <h1>{{ user_profile.relax }}hrs</h1>
+            </div>
+
+            <div class="activities">
+                <h2>Study</h2>
+            <h1>{{ user_profile.study }}hrs</h1>
+            </div>
+
+            <div class="activities">
+                <h2>Self Care</h2>
+            <h1>{{ user_profile.self_care }}hrs</h1>
+            </div>
+
+            <div class="activities">
+                <h2>Summary</h2>
+                <img src="{% static "images/graph.png" %}" alt="graph"/>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

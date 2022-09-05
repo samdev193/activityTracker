@@ -1,0 +1,53 @@
+.user-card-container {
+    margin-top: 10%;
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+body {
+    background-color: var(--clr-soft-magenta);
+}
+
+.activity-cards{
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    height: 400px;
+    flex-wrap: wrap;
+}
+
+
+.user-card{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-gradient-violet);
+    border-radius: 20%;
+}
+
+
+.activities{
+    background-color: var(--clr-gradient-violet);
+    height: 150px;
+    border-radius: 20%;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: block;
+    /* 3 in a row */
+    flex-basis: calc(33.333% - 50px);
+}
+
+.activities h2{
+    margin-top: 20px;
+}
+
+.activities img {
+    height: 75px;
+    width: 75px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_filters %}
+{% block content %}
+<form method="POST" class="form-group">
+    <link rel="stylesheet" href="{% static "css/register.css"%}"/>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <a href="/register">Create an account </a>
+    <br>
+    <button type="submit" class="register-button">Login</button>
+
+</form>
+{% endblock %}

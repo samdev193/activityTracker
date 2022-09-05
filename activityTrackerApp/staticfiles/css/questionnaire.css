@@ -1,0 +1,96 @@
+:root {
+
+--text-dark-blue: hsl(238, 29%, 16%);
+--bg-gradient-violet: hsl(273, 75%, 66%);
+--bg-gradient-blue: hsl(240, 73%, 65%);
+--text-grayish-blue: hsl(237, 12%, 33%);
+--text-dark-grayish-blue: hsl(240, 6%, 50%);
+--divider-light-blue: hsl(240, 5%, 91%);
+--white: hsl(0, 0%, 100%);
+
+--container-width: 60rem;
+--container-height: 70vh;
+--container-padding: 2rem;
+--container-border-radius: 2.5rem;
+--sub-container-width: 450px;
+--section-height: 2rem;
+--section-padding: 1rem;
+
+--font-large: 2rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(var(--clr-soft-magenta), var(--clr-pink));
+}
+
+img {
+    width: 75%;
+    height: 75%;
+    margin-left: 6rem;
+}
+
+.container {
+    position: relative;
+    display:flex;
+    flex-shrink: 0;
+    background-color: var(--white);
+    height: var(--container-height);
+    border-radius: var(--container-border-radius);
+}
+
+.img-container {
+    position: relative;
+    width: var(--sub-container-width);
+    overflow:hidden;
+    background-size:150%;
+    background-position: 115% 50%;
+    background-repeat: no-repeat;
+}
+
+.txt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: var(--sub-container-width);
+    padding:    calc(var(--container-padding) * 2)
+                calc(var(--container-padding) * 3)
+                calc(var(--container-padding) * 2)
+                var(--container-padding);
+}
+
+.title {
+    font-size: var(--font-large);
+    font-weight: 700;
+}
+
+.section {
+    min-height: var(--section-height);
+    color: var(--text-dark-grayish-blue);
+    padding: var(--section-padding) 0;
+    border-bottom: 1px solid var(--divider-light-blue);
+    margin-top: -10px;
+
+}
+
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.img {
+    position: absolute;
+    top: 50%;
+    transform: translate(-10%, -50%);
+}
+
+.txt-container {
+    flex: 1;
+}
